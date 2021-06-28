@@ -13,7 +13,7 @@ const ExpenseFilter = ({ expenses, selectedYear, selectDropDownHandler }) => {
   return (
     <div className='expense-filter'>
       <div className='expense-filter-control'>
-        <label>Filter By year</label>
+        <label className='filter-text'>Filter By year</label>
         <select value={selectedYear} onChange={changeDropDownHandler}>
           {map(uniqueYears, (year) => {
             return <option value={year}>{year}</option>;

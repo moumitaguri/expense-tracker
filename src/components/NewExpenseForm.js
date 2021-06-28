@@ -62,7 +62,9 @@ const NewExpenseForm = ({ onSubmission }) => {
         ></input>
       </div>
       <div className='new-expense-form-actions'>
-        <button type='submit'>Add Expense</button>
+        <button type='submit' className='add-expense-btn'>
+          Add Expense
+        </button>
       </div>
     </form>
   );

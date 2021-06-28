@@ -31,7 +31,6 @@
   border: 1px solid rgb(39, 39, 39);
   border-radius: 8px;
   width: 600px;
-  margin: 10px;
   background-color: rgb(80, 80, 80);
 }
 
@@ -67,10 +66,26 @@
   flex-direction: column;
   border: 1px solid black;
   border-radius: 8px;
+  margin: 10px;
+  width: 620px;
+}
+
+.expense-filter {
+  margin: 10px 10px 5px 10px;
+  background-color: rgb(80, 80, 80);
+  border-radius: 8px;
+}
+
+.filtered-expenses {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 8px;
   align-items: center;
-  /* height: 670px; */
+
   overflow: scroll;
   background-color: rgb(39, 39, 39);
+  margin: 5px 10px 10px 10px;
 }
 
 .new-expense {
@@ -85,14 +100,31 @@
   width: 600px;
   display: flex;
   margin: 10px;
-  border: 1px solid black;
   border-radius: 8px;
   height: 40%;
 }
 .new-expense-form-control {
   margin: 5px;
   width: 33.33%;
+  background-color: rgb(80, 80, 80);
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  border: none;
+  opacity: 0.6;
 }
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  /* border-radius: 4px; */
+  margin-right: 10px;
+  opacity: 0.8;
+  filter: invert(0.8);
+}
+
 .new-expense-form-actions {
   margin: 10px;
   height: 25%;
@@ -100,4 +132,23 @@
   border-radius: 8px;
   display: flex;
   justify-content: flex-end;
+}
+.filter-text {
+  color: white;
+  margin-right: 5px;
+}
+
+body {
+  background-color: rgb(39, 39, 39);
+}
+
+.add-expense-btn {
+  background-color: rgb(60, 2, 60);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid white;
+  width: 25%;
+  text-align: center;
+  margin-right: 5px;
+  font-weight: bold;
 }

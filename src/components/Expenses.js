@@ -16,13 +16,16 @@ const Expenses = (props) => {
   });
 
   return (
-    <div>
-      <ExpenseFilter
-        selectedYear={selectedYear}
-        expenses={props.items}
-        selectDropDownHandler={selectDropDownHandler}
-      />
-      <div className='expenses'>
+    <div className='expenses'>
+      <div className='expense-filter'>
+        <ExpenseFilter
+          selectedYear={selectedYear}
+          expenses={props.items}
+          selectDropDownHandler={selectDropDownHandler}
+        />
+      </div>
+
+      <div className='filtered-expenses'>
         {filteredExpenses.map((item) => {
           return (
             <ExpenseItem

@@ -12,7 +12,7 @@ const App = () => {
   };
   return (
     <div className='App'>
-      <h1>Expense Tracker</h1>
+      <h1 className='expense-tracker-header'>Expense Tracker</h1>
       <NewExpense onExpenseAddition={handleExpenseAddition} />
       <Expenses items={expenses} />
     </div>
