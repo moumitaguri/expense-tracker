@@ -40,13 +40,6 @@ const NewExpenseForm = ({ onSubmission }) => {
     <form onSubmit={submitHandler}>
       <div className='new-expense-form-controls'>
         <input
-          type='date'
-          className='new-expense-form-control'
-          min='2020-01-01'
-          onChange={changeDate}
-          value={enteredDate}
-        ></input>
-        <input
           type='text'
           placeholder='Expense Title'
           className='new-expense-form-control'
@@ -60,8 +53,15 @@ const NewExpenseForm = ({ onSubmission }) => {
           onChange={changeAmount}
           value={enteredAmount}
         ></input>
+        <input
+          type='date'
+          className='new-expense-form-control'
+          min='2020-01-01'
+          onChange={changeDate}
+          value={enteredDate}
+        ></input>
       </div>
-      <div className='className="new-expense-form-actions'>
+      <div className='new-expense-form-actions'>
         <button type='submit'>Add Expense</button>
       </div>
     </form>

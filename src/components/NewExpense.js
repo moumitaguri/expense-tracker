@@ -10,7 +10,7 @@ const NewExpense = ({ onExpenseAddition }) => {
     onExpenseAddition(expenseData);
   };
   return (
-    <div className='newExpense'>
+    <div className='new-expense'>
       <NewExpenseForm onSubmission={handleSubmission} />
     </div>
   );
