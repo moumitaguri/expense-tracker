@@ -1,24 +1,19 @@
+import { useState } from 'react';
 import './App.css';
 import Expenses from './components/Expenses';
-import NewExpenseForm from './components/NewExpenseForm';
+import NewExpense from './components/NewExpense';
 
 const App = () => {
-  const expenses = [
-    {
-      date: new Date(),
-      title: 'Some Books',
-      amount: 400,
-      id: 1,
-    },
-    { date: new Date(), title: 'Electricity Bill', amount: 1000, id: 2 },
-    { date: new Date(), title: 'Water', amount: 40, id: 3 },
-    { date: new Date(), title: 'Colour pencils', amount: 100, id: 4 },
-    { date: new Date(), title: 'Craft Materials', amount: 200, id: 5 },
-  ];
+  const [expenses, setExpenses] = useState([]);
+
+  const handleExpenseAddition = (expense) => {
+    setExpenses([...expenses, expense]);
+    console.log('inside app.js expenses : ', expenses);
+  };
   return (
     <div className='App'>
       <h1>Expense Tracker</h1>
-      <NewExpenseForm />
+      <NewExpense onExpenseAddition={handleExpenseAddition} />
       <Expenses items={expenses} />
     </div>
   );

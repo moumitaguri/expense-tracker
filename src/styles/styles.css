@@ -68,7 +68,7 @@
   border: 1px solid black;
   border-radius: 8px;
   align-items: center;
-  height: 670px;
+  /* height: 670px; */
   overflow: scroll;
   background-color: rgb(39, 39, 39);
 }

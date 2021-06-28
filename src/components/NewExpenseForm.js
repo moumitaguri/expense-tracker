@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const NewExpenseForm = () => {
+const NewExpenseForm = ({ onSubmission }) => {
   //   const [userInput, setUserInput] = useState({
   //     title: useState(''),
   //     amount: useState(''),
@@ -31,6 +31,7 @@ const NewExpenseForm = () => {
       date: new Date(enteredDate),
     };
     console.log(userInput);
+    onSubmission(userInput);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
