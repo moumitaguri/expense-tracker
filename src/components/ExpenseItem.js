@@ -1,6 +1,6 @@
 import ExpenseDate from './ExpenseDate';
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   return (
     <div className='expenseItem'>
       <ExpenseDate date={props.date} />
@@ -8,5 +8,5 @@ function ExpenseItem(props) {
       <div className='expenseItem-amount'>Rs. {props.amount}</div>
     </div>
   );
-}
+};
 export default ExpenseItem;

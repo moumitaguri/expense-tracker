@@ -1,5 +1,6 @@
 import '../styles/styles.css';
-function ExpenseDate(props) {
+
+const ExpenseDate = (props) => {
   return (
     <div className='expenseDate'>
       <div className='expenseDate-month'>
@@ -13,6 +14,6 @@ function ExpenseDate(props) {
       </div>
     </div>
   );
-}
+};
 
 export default ExpenseDate;
