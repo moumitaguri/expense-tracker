@@ -95,6 +95,8 @@
   /* margin: 10px; */
   width: 620px;
   height: 150px;
+  justify-content: center;
+  /* align-items: center; */
 }
 .new-expense-form-controls {
   width: 600px;
@@ -126,12 +128,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .new-expense-form-actions {
-  margin: 10px;
+  /* margin: 10px; */
   height: 25%;
   /* border: 1px solid black; */
   border-radius: 8px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .filter-text {
   color: white;
@@ -151,4 +153,31 @@ body {
   text-align: center;
   margin-right: 5px;
   font-weight: bold;
+}
+.add-new-expense-btn {
+  background-color: rgb(60, 2, 60);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid white;
+  width: 25%;
+  height: 25%;
+  text-align: center;
+  margin-right: 5px;
+  font-weight: bold;
+  position: relative;
+  top: 55px;
+}
+.cancel-btn {
+  background-color: rgb(60, 2, 60);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid white;
+  width: 25%;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.no-expense-text {
+  color: white;
 }

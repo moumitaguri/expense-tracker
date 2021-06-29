@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-const NewExpenseForm = ({ onSubmission }) => {
+
+const cancelText = 'Cancel';
+const addExpenseText = 'Add Expense';
+
+const NewExpenseForm = ({ onSubmission, onCancel }) => {
   //   const [userInput, setUserInput] = useState({
   //     title: useState(''),
   //     amount: useState(''),
@@ -36,6 +40,7 @@ const NewExpenseForm = ({ onSubmission }) => {
     setEnteredAmount('');
     setEnteredDate('');
   };
+
   return (
     <form onSubmit={submitHandler}>
       <div className='new-expense-form-controls'>
@@ -62,8 +67,11 @@ const NewExpenseForm = ({ onSubmission }) => {
         ></input>
       </div>
       <div className='new-expense-form-actions'>
+        <button className='cancel-btn' onClick={onCancel}>
+          {cancelText}
+        </button>
         <button type='submit' className='add-expense-btn'>
-          Add Expense
+          {addExpenseText}
         </button>
       </div>
     </form>
